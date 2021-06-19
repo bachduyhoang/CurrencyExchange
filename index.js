@@ -12,7 +12,7 @@ const fetchData = (from, amount) => {
       const value = data[key];
       console.log(data, key, value);
       const vnd = document.querySelector(".to");
-      vnd.value = value;
+      vnd.value = value * amount;
     })
     .catch((err) => {
       console.log(err);
