@@ -9,10 +9,10 @@ const fetchData = (from, amount) => {
     })
     .then((data) => {
       const key = Object.keys(data)[0];
-      const value = data[key];
+      const value = data[key] * amount;
       console.log(data, key, value);
       const vnd = document.querySelector(".to");
-      vnd.value = value * amount;
+      vnd.value = value;
     })
     .catch((err) => {
       console.log(err);
